@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 # Prerequisites
 *.d
+=======
+*.d
+*.idea
+.DS_Store
+>>>>>>> b77f971712285186f32e12228b932c81685ca5f8
 
 # Object files
 *.o
@@ -34,6 +40,10 @@
 *.i*86
 *.x86_64
 *.hex
+<<<<<<< HEAD
+=======
+*.class
+>>>>>>> b77f971712285186f32e12228b932c81685ca5f8
 
 # Debug files
 *.dSYM/
@@ -48,4 +58,8 @@
 modules.order
 Module.symvers
 Mkfile.old
+<<<<<<< HEAD
 dkms.conf
+=======
+dkms.conf
+>>>>>>> b77f971712285186f32e12228b932c81685ca5f8
