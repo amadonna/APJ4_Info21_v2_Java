@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks List</title>
+</head>
+<body>
+<h2>Peers List</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Task</th>
+        <th>Parent Task</th>
+        <th>Max XP</th>
+        <!-- Добавьте другие поля по необходимости -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task : ${tasks}">
+        <!--/*@thymesVar id="title" type=""*/-->
+        <td th:text="${tasks.title}"></td>
+        <td th:text="${tasks.parenttask}"></td>
+        <td th:text="${tasks.maxxp}"></td>
+        <!-- Добавьте другие поля по необходимости -->
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

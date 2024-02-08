@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Peers List</title>
+</head>
+<body>
+
+<h2>Peers List</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nickname</th>
+        <th>Birthday</th>
+        <!-- Добавьте другие поля по необходимости -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="peer : ${peers}">
+        <td th:text="${peer.nickname}"></td>
+        <td th:text="${#dates.format(peer.birthday, 'yyyy-MM-dd')}"></td>
+        <!-- Добавьте другие поля по необходимости -->
+    </tr>
+    </tbody>
+</table>
+
+<!-- Форма для добавления нового пира -->
+<form action="data/addPeer" method="post">
+    <label for="nickname">Nickname:</label>
+    <input type="text" id="nickname" name="nickname" required>
+
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday" required>
+
+    <!-- Добавьте другие поля по необходимости -->
+
+    <button type="submit">Add Peer</button>
+</form>
+
+</body>
+</html>
