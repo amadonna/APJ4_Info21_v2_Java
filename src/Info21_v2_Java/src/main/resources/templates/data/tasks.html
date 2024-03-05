@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Tasks List</title>
@@ -18,10 +18,9 @@
     </thead>
     <tbody>
     <tr th:each="task : ${tasks}">
-        <!--/*@thymesVar id="title" type=""*/-->
-        <td th:text="${tasks.title}"></td>
-        <td th:text="${tasks.parenttask}"></td>
-        <td th:text="${tasks.maxxp}"></td>
+        <td th:text="${task.title}"></td>
+        <td th:text="${task.parentTasks}"></td>
+        <td th:text="${task.maxXp}"></td>
         <!-- Добавьте другие поля по необходимости -->
     </tr>
     </tbody>

@@ -19,8 +19,6 @@
     <tbody>
     <tr th:each="peer : ${peers}">
         <td th:text="${peer.nickname}"></td>
-        <td th:text="${#dates.format(peer.birthday, 'yyyy-MM-dd')}"></td>
-        <!-- Добавьте другие поля по необходимости -->
     </tr>
     </tbody>
 </table>
@@ -32,8 +30,6 @@
 
     <label for="birthday">Birthday:</label>
     <input type="date" id="birthday" name="birthday" required>
-
-    <!-- Добавьте другие поля по необходимости -->
 
     <button type="submit">Add Peer</button>
 </form>

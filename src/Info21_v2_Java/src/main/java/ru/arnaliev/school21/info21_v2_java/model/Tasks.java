@@ -14,9 +14,8 @@ public class Tasks {
     @Id
     @Column(name = "title", columnDefinition = "text")
     private String title;
-    @ManyToOne
-    @JoinColumn(name = "parenttask", referencedColumnName = "title")
-    private Tasks parentTasks;
-    @Column(name = "maxxp")
+    @Column(name = "parenttask", columnDefinition = "text")
+    private String parentTasks;
+    @Column(name = "maxxp", columnDefinition = "int")
     private  int maxXp;
 }
